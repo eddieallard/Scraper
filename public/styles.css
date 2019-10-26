@@ -2,8 +2,22 @@ body {
     background-color: whitesmoke;
 }
 
+#pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 10px;
+}
+
 #primary {
     text-align: center;
+    margin-right: -550px;
+}
+
+#warning {
+    text-align: center;
+    margin-left: 600px;
 }
 
 .navbar {
@@ -11,14 +25,12 @@ body {
     width:100%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+.navbar-brand {
+    margin-left: 400px;
+    font-size: 20px;
+}
 
 #wrapper {
     text-align: center;
 }
 
-#pic {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-}
