@@ -28,7 +28,7 @@ app.use(express.static("public"));
 
 // Connect to the Mongo DB
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/ViceHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Routes
@@ -39,18 +39,19 @@ app.get("/scrape", function(req, res) {
   axios.get("https://www.vice.com/en_us/topic/the-noisey-guide-to").then(function(response) {
     // Then, we load that into cheerio and save it to $ for a shorthand selector
     var $ = cheerio.load(response.data);
+    console.log("Response: ", $);
 
     // Now, we grab every h2 within an article tag, and do the following:
-    $("h3 p").each(function(i, element) {
+    $("div.topics-card__content-text").each(function(i, element) {
       // Save an empty result object
       var result = {};
 
       // Add the text and href of every link, and save them as properties of the result object
       result.title = $(this)
-        .children("p")
+        .children("a")
         .text();
       result.link = $(this)
-        .children("p")
+        .children("a")
         .attr("href");
         if (result.title && result.link) {
       // Create a new Article using the `result` object built from scraping

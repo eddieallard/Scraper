@@ -1,47 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vice Scraper</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Vice News Scraper</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <!--NAVIGATION BAR-->
-    <div class="container">
-        <ul class="nav justify-content-center" style="font-size: 40px">
-            <li class="nav-item">
-                <a class="nav-link active">VICE SCRAPER</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Saved Article</a>
-            </li>
-            <li class="nav-item">
-                    <button type="button" class="btn btn-danger">Scrape An Article!</button>
-            </li>
-        </ul>
 
-        <!--ARTICLES AND NOTES DIV-->
-        <div id="wrapper">
-            <div id="articles"></div>
-            <div id="notes"></div>
-        </div>
+    <!--LOGO BELOW THIS LINE-->
+    <img id="pic" src="./images/vice-news.png" width="100px" height="100px"><br>
+
+    <!--NAVBAR BELOW THIS LINE-->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Mongo DB Scraper</a>
+        <form class="form-inline">
+          <button id="primary" type="button" class="btn btn-primary">Primary</button>
+        </form>
+      </nav><br>
+
+    
+
+      <!--ARTICLES FROM SCRAPER-->
+  <div id="wrapper">
+    <div id="articles">
     </div>
+  </div>
 
 
 
 
 
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="app.js"></script>
 </body>
 
 </html>
