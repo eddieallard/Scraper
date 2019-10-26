@@ -1,0 +1,45 @@
+<div class="container">
+
+
+    <!--LOGO BELOW THIS LINE-->
+    <img id="pic" src="./images/vice-news.png" width="75px" height="75px"><br>
+    <!--END OF LOGO-->
+
+    <!--NAVBAR BELOW THIS LINE-->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand">Mongo DB Scraper</a>
+        <form class="form-inline">
+          <button id="primary" type="button" class="btn btn-primary">Scrape New Articles!</button>
+          <a href="/scrape"> <button id="warning" type="button" class="btn btn-warning">Saved Articles!</button>
+        </form>
+      </nav><br>
+      <!--END OF NAVBAR-->
+
+      <!--JUMBOTRON -->
+      <div class="jumbotron jumbotron-fluid">
+          <div class="container">
+            <h1 class="display-4">MONGO SCRAPER</h1>
+            <p class="lead">VICE NEWS EDITION</p>
+          </div>
+        </div>
+        <!--END OF JUMBOTRON-->
+
+    {{!-- <br> --}}
+
+    {{#each Article}}
+    <div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">{{this.title}}
+                <a href="/notes/{{this._id}}">
+                    <button type="button" id="noteBtn" class="btn btn-warning save-article">See Notes</button> </a>
+            </div>
+            {{!-- <br> --}}
+            <div class="panel-body">
+                <a href="https://www.vice.com/en_us/topic/the-noisey-guide-to{{this.link}}" target="_blank"> {{this.link}}</a>
+
+            </div>
+            {{!-- <button type="button" id="noteBtn" class="btn btn-warning save-article">See Notes</button> </a> --}}
+        </div>
+    </div>
+    {{/each}}
+</div>
