@@ -102,7 +102,7 @@ app.get("/scrape", (req, res) => {
   });
 });
 
-app.post("/notes/:id", (req, res) => {
+app.post("/notes/:id", function (req, res) {
   var newNote = new Note(req.body);
   newNote.save(function (error, doc) {
     if (error) {
@@ -129,7 +129,7 @@ app.post("/notes/:id", (req, res) => {
   });
 });
 
-app.get("/notes/:id", (req, res) => {
+app.get("/notes/:id", function (req, res) {
   console.log("This is the req.params: " + req.params.id);
   Article.find({
       "_id": req.params.id
@@ -147,7 +147,7 @@ app.get("/notes/:id", (req, res) => {
     });
 });
 
-app.get("/delete/:id", (req, res) => {
+app.get("/delete/:id", function (req, res) {
   Note.remove({
     "_id": req.params.id
   }).exec(function (error, doc) {
@@ -161,6 +161,6 @@ app.get("/delete/:id", (req, res) => {
 });
 
 // START THE SERVER UNDER THIS LINE
-app.listen(PORT, () => {
+app.listen(PORT, function () {
   console.log("App running on PORT" + PORT + "!");
 });

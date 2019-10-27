@@ -54,3 +54,7 @@ body {
     font-size: 25px;
     
 }
+
+.panel-primary, .panel-heading {
+    text-align: center;
+}

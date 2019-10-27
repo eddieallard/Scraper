@@ -9,8 +9,8 @@
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand">Mongo DB Scraper</a>
         <form class="form-inline">
-          <button id="primary" type="button" class="btn btn-primary">Scrape New Articles!</button>
-          <a href="/scrape"> <button id="warning" type="button" class="btn btn-warning">Saved Articles!</button>
+          <a href="/scrape"><button id="primary" type="button" class="btn btn-primary">Scrape New Articles!</button>
+          <button id="warning" type="button" class="btn btn-warning">Saved Articles!</button>
         </form>
       </nav><br>
       <!--END OF NAVBAR-->
@@ -30,7 +30,7 @@
     <div class="row">
         <div class="panel panel-primary">
             <div class="panel-heading">{{this.title}}
-                <a href="/notes/{{this._id}}">
+                <a href="notes/{{this._id}}">
                     <button type="button" id="noteBtn" class="btn btn-warning save-article">See Notes</button> </a>
             </div>
             {{!-- <br> --}}
