@@ -9,20 +9,20 @@
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand">Mongo DB Scraper</a>
         <form class="form-inline">
-          <a href="/scrape"><button id="primary" type="button" class="btn btn-primary">Scrape New Articles!</button>
-          <button id="warning" type="button" class="btn btn-warning">Saved Articles!</button>
+            <a href="/scrape"><button id="primary" type="button" class="btn btn-primary">Scrape New Articles!</button>
+                <button id="warning" type="button" class="btn btn-warning">Saved Articles!</button>
         </form>
-      </nav><br>
-      <!--END OF NAVBAR-->
+    </nav><br>
+    <!--END OF NAVBAR-->
 
-      <!--JUMBOTRON -->
-      <div class="jumbotron jumbotron-fluid">
-          <div class="container">
+    <!--JUMBOTRON -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
             <h1 class="display-4">MONGO SCRAPER</h1>
             <p class="lead">VICE NEWS EDITION</p>
-          </div>
         </div>
-        <!--END OF JUMBOTRON-->
+    </div>
+    <!--END OF JUMBOTRON-->
 
     {{!-- <br> --}}
 
@@ -35,10 +35,9 @@
             </div>
             {{!-- <br> --}}
             <div class="panel-body">
-                <a href="https://www.vice.com/en_us/topic/the-noisey-guide-to{{this.link}}" target="_blank"> {{this.link}}</a>
-
+                <a href="https://www.vice.com/en_us/topic/the-noisey-guide-to{{this.link}}" target="_blank">
+                    {{this.link}}</a>
             </div>
-            {{!-- <button type="button" id="noteBtn" class="btn btn-warning save-article">See Notes</button> </a> --}}
         </div>
     </div>
     {{/each}}

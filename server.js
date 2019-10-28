@@ -44,6 +44,7 @@ if (process.env.MONGODB_URI) {
 } else {
   mongoose.connect(databaseUri);
 }
+
 var db = mongoose.connection;
 
 db.on("error", error => {
@@ -77,7 +78,7 @@ app.get("/scrape", (req, res) => {
     var $ = cheerio.load(html);
     $("div.topics-card__content-text").each(function (i, element) {
       var result = {};
-
+      if (result.title && result.link) {
       result.title = $(this)
         .children("a")
         .text();
@@ -95,7 +96,7 @@ app.get("/scrape", (req, res) => {
           console.log(doc);
         }
       });
-
+      }
     });
     res.redirect("/");
     console.log("Successfully Scraped");
